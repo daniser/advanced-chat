@@ -7,7 +7,7 @@ export default class RoomTag extends Model implements BaseTag {
 
     static primaryKey = ["name", "type"];
 
-    @Attr() declare name: string;
-    @Str("") declare type: string;
-    @Str("") declare link: string;
+    @Attr() name!: string;
+    @Str("") type!: string;
+    @Str("") link!: string;
 }

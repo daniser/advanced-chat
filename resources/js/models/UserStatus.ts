@@ -7,8 +7,8 @@ export default class UserStatus extends Model implements BaseUserStatus {
 
     static primaryKey = ["roomId", "userId"];
 
-    @Attr() declare roomId: string;
-    @Attr() declare userId: string;
-    @Str("offline") declare state: "online" | "offline";
-    @Attr() declare lastChanged: string;
+    @Attr() roomId!: string;
+    @Attr() userId!: string;
+    @Str("offline") state!: "online" | "offline";
+    @Attr() lastChanged!: string;
 }

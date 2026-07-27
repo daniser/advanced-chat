@@ -10,12 +10,12 @@ export default class User extends Model implements BaseUser {
 
     static primaryKey = "_id";
 
-    @Attr() declare _id: string;
-    @Str("") declare username: string;
-    @Str("") declare credential: string;
-    @Str("") declare avatar: string;
-    declare status: UserStatus;
+    @Attr() _id!: string;
+    @Str("") username!: string;
+    @Str("") credential!: string;
+    @Str("") avatar!: string;
+    status!: UserStatus;
 
-    @BelongsToMany(() => Room, { as: "status", model: () => UserStatus }, "userId", "roomId") declare rooms: Room[];
-    @HasMany(() => Message, "senderId") declare messages: Message[];
+    @BelongsToMany(() => Room, { as: "status", model: () => UserStatus }, "userId", "roomId") rooms!: Room[];
+    @HasMany(() => Message, "senderId") messages!: Message[];
 }

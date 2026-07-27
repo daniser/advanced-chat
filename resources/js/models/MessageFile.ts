@@ -8,18 +8,18 @@ export default class MessageFile extends Model implements BaseMessageFile {
 
     static primaryKey = ["messageId", "name"];
 
-    @Str("") declare messageId: string;
-    @Str("") declare name: string;
-    @Str("") declare type: string;
-    @Str("") declare extension: string;
-    @Str("") declare url: string;
-    @Str(null) declare localUrl?: string;
-    @Str(null) declare preview?: string;
-    @Num(null) declare size?: number;
-    @Bool(null) declare audio?: boolean;
-    @Num(null) declare duration?: number;
-    @Num(null) declare progress?: number;
-    @Attr() declare blob?: Blob;
+    @Str("") messageId!: string;
+    @Str("") name!: string;
+    @Str("") type!: string;
+    @Str("") extension!: string;
+    @Str("") url!: string;
+    @Str(null) localUrl?: string;
+    @Str(null) preview?: string;
+    @Num(null) size?: number;
+    @Bool(null) audio?: boolean;
+    @Num(null) duration?: number;
+    @Num(null) progress?: number;
+    @Attr() blob?: Blob;
 
-    @BelongsTo(() => Message, "messageId") declare message: Message;
+    @BelongsTo(() => Message, "messageId") message!: Message;
 }

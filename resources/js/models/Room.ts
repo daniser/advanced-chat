@@ -12,21 +12,21 @@ export default class Room extends Model implements BaseRoom {
 
     static primaryKey = "roomId";
 
-    @Uid(7) declare roomId: string;
-    @Attr() declare creatorId: string;
-    @Str("") declare roomName: string;
-    @Str("") declare avatar: string;
-    @Num(null) declare unreadCount?: number;
-    @Attr(null) declare index?: StringNumber | Date;
-    @Attr(null) declare lastMessage?: LastMessage;
-    //@Attr(null) declare typingUsers?: string[];
-    @Attr([]) declare tags: string[];
-    declare status: UserStatus;
+    @Uid(7) roomId!: string;
+    @Attr() creatorId!: string;
+    @Str("") roomName!: string;
+    @Str("") avatar!: string;
+    @Num(null) unreadCount?: number;
+    @Attr(null) index?: StringNumber | Date;
+    @Attr(null) lastMessage?: LastMessage;
+    //@Attr(null) typingUsers?: string[];
+    @Attr([]) tags!: string[];
+    status!: UserStatus;
 
-    @BelongsTo(() => User, "creatorId") declare creator: User;
-    @BelongsToMany(() => User, { as: "status", model: () => UserStatus }, "roomId", "userId") declare users: User[];
-    //@HasManyBy(() => User, "typingUsers") declare usersTyping: User[];
-    @HasMany(() => Message, "roomId") declare messages: Message[];
+    @BelongsTo(() => User, "creatorId") creator!: User;
+    @BelongsToMany(() => User, { as: "status", model: () => UserStatus }, "roomId", "userId") users!: User[];
+    //@HasManyBy(() => User, "typingUsers") usersTyping: User[];
+    @HasMany(() => Message, "roomId") messages!: Message[];
 
     static created(room: Room, record?: { users?: string[] }) {
         console.log("created", room);

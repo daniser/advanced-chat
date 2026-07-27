@@ -8,8 +8,7 @@ export default class UserRepository extends AxiosRepository<User> {
 
     fetch = async (search?: string, fresh = false) => {
         if (fresh) UserRepository.cursor = null;
-        const response = await this.api().get(window.chat.path + "/api/users", {
-            dataKey: "data",
+        const response = await this.api().get("/users", {
             params: { search, cursor: UserRepository.cursor },
         });
         UserRepository.cursor = response.response.data.meta.next_cursor;

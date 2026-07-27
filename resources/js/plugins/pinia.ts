@@ -7,8 +7,8 @@ export default createPinia().use(
         plugins: [
             createPiniaOrmAxios({
                 axios: window.axios,
-                //baseURL: window.chat.path + "/api",
-                //dataKey: "data",
+                baseURL: window.chat.path + "/api",
+                dataKey: "data",
             }),
         ],
     }),

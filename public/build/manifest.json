@@ -1,6 +1,6 @@
 {
-  "_vuetify-BdZjvL0G.js": {
-    "file": "assets/vuetify-BdZjvL0G.js",
+  "_vuetify-BElo0FP3.js": {
+    "file": "assets/vuetify-BElo0FP3.js",
     "name": "vuetify",
     "css": [
       "assets/vuetify-Q9ERjWR-.css"
@@ -37,21 +37,21 @@
     "src": "resources/images/favicon.svg"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-Cl0jNo0X.js",
+    "file": "assets/app-Cu8bD0TQ.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
     "imports": [
-      "_vuetify-BdZjvL0G.js"
+      "_vuetify-BElo0FP3.js"
     ]
   },
   "resources/js/win.ts": {
-    "file": "assets/win-Dzl7gbko.js",
+    "file": "assets/win-CEcNiCNJ.js",
     "name": "win",
     "src": "resources/js/win.ts",
     "isEntry": true,
     "imports": [
-      "_vuetify-BdZjvL0G.js"
+      "_vuetify-BElo0FP3.js"
     ],
     "assets": [
       "assets/favicon-DXKRda58.svg"
